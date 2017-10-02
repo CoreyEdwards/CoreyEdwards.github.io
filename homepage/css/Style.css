@@ -1,40 +1,56 @@
-#body{
-				background: rgb(186, 197, 255);
-			}
+	#body{
+		background: rgb(186, 197, 255);
+	}
 
-			#body-format{
-				margin-left:10%;
+	#body-format{
+		margin-left:10%;
 				
-				background: rgb(186, 197, 255);
-				font-size: 120%;
-				font: georgian;
-			}
-			
-			.logo{
-				position:absolute;
-				top: 10%;
-				left: 70%;
-			
-				border:30px double rgb(0,0,300);
-			}
-			
-			.headingstyle1{			
-				margin-left: 20%;
-				padding-right:10%;
-				padding-left:10%;
-				font-size: 160%;
-				border-bottom:10px solid;
-			
-			}
-			
-			
-			}
-			
-			.company-name{
-			
-				margin-left: 15%;
-				font-size: 120%;
-				border-bottom: 20px solid;
-			}
+		background: rgb(186, 197, 255);		
+		font-size: 120%;
+		font: georgian;
+	}
 	
+	.logo{
+		position:absolute;
+		top: 10%;
+		left: 70%;
+			
+		border:30px double rgb(0,0,300);
+	}
+			
+	.headingstyle1{			
+		margin-left: 20%;
+		padding-right:10%;
+		padding-left:10%;
+		font-size: 160%;
+		border-bottom:10px solid;
+			
+	}
+			
+	.company-name{
+			
+		margin-left: 15px;
+		Padding-right:10%;
+		Padding-left:10%;
+		font-size: 120%;
+		border-bottom: 20px solid;
+	}
 	
+	.pic-style1{
+		padding-left: 25%;
+		width:500px;
+	}
+	
+	.headingstyle2{			
+		margin-left: 20%;
+		padding-right:10%;
+		padding-left:10%;
+		font-size: 100%;
+	}
+	
+	.tablestyle1{
+		border: 10px double white;
+		margin-left: 8%;
+		font-size: 130%
+	}
+			
