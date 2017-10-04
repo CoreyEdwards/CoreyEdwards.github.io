@@ -29,11 +29,14 @@
 			
 	.company-name{
 			
-		margin-left: 15px;
+		margin-left: 15%;
+		margin-bottom: 20%;
 		Padding-right:10%;
 		Padding-left:10%;
+		
+		background: rgb(217,217,217);
 		font-size: 120%;
-		border-bottom: 20px solid;
+		border-bottom: 10px solid;
 	}
 	
 	.pic-style1{
@@ -53,4 +56,10 @@
 		margin-left: 8%;
 		font-size: 130%
 	}
-			
+	.link{
+		background: rgb(217,217,217);
+		padding-right:10px;
+		padding-bottom: 20px;
+		padding-left: 4px;
+		border:10px solid white;
+		
