@@ -35,15 +35,3 @@ function validate()
         return false;
     }
 }
-/*
-need to validate if there are blanks in any spaces 
-
-need to validat first name , last name for no intagers
-
-need to validate email for "@", ".com", ".edu" , etc. 
-
-
-
-
-
-*///get the current date
