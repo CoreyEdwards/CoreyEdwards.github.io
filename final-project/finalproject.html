@@ -1,20 +1,69 @@
 <html>
-	
 	<head>
-		<meta charset="uft-8" />
-		<title> Final Prodject: Race </title>
-		<meta name="description" content="HTML5 Template">
+		<title>North Pole Race</title>
 	
-		<link rel= "stylesheet" href="css/stylesheet.css" type="text/css">
-		 
 	</head>
 	
 	<body >
-		<p>
-			this is to test the web page
-		</p>
 	
 
+		<img id = "green" src = "images/greenlight.jpg" style="position:absolute; top:100px; left:600px; height:100px; width:50px;">
+		<img id = "red" src = "images/redlight.jpg" style="position:absolute; top:100px; left:600px; height:100px; width:50px;" 
+		onclick="javascript:startGame()">
+		
+		<img src = "images/finishline.png" style = "position:absolute; top:300px; left:1180px; height:150px;">
+		
+		<img id = "santa" src = "images/santa.jpg" style = "position:absolute; top:300px; left:50px; height:50px; width:110px;">
+		<img id = "superman" src = "images/superman.jpg" style = "position:absolute; top:350px; left:50px; height:50px; width:110px;">
+		
+		<img id = "result" src = "images/santawin.jpg" style = "position:absolute; top:170px; left:550px; height:150px; width:150px;" 
+		onclick="reset()">
+		<img id = "result2" src = "images/supermanwin.jpg" style = "position:absolute; top:170px; left:550px; height:150px; width:150px;" 
+		onclick="reset()">
+		<p id = "resMessage" style="position:absolute; top:300px; left:450px; font-weight:bold; font-size: 25px"></p>
+
+
+			<script>
+				var Interval = null;
+				document.getElementById("resMessage").style.visibility = "hidden";
+				document.getElementById("green").style.visibility = "hidden";
+				document.getElementById("result").style.visibility = "hidden";
+				document.getElementById("result2").style.visibility = "hidden";
+				function startGame(){
+					document.getElementById("green").style.visibility = "visible";
+					document.getElementById("red").style.visibility = "hidden";
+					movecharacters();
+					interval = setInterval(movecharacters, 10);
+				}
+
+				function reset(){
+					window.location.href = "coreyedwards.github.io/final-project/finalproject.html";
+				}
+
+				function movecharacters(){
+					var speed1 = Math.random() * 10;
+					var speed2 = Math.random() * 10;
+					
+					var p1 = parseInt(document.getElementById("santa").style.left.substr(0, document.getElementById("santa").style.left.length-2));
+					var p2 = parseInt(document.getElementById("superman").style.left.substr(0, document.getElementById("superman").style.left.length-2));
+					
+					document.getElementById("santa").style.left = "" + (p1 + speed1) + "px";
+					document.getElementById("superman").style.left = "" + (p2 + speed2) + "px";
+					
+					if (p1 >= 1250 - 115){
+						document.getElementById("result").style.visibility = "visible";
+						clearInterval(interval);
+						document.getElementById("resMessage").style.visibility = "visible";
+						document.getElementById("resMessage").innerHTML = "Santa Wins!!! Man of Steel can't keep up! ";
+					}
+					if(p2 >= 1250 - 115) {
+						document.getElementById("result2").style.visibility = "visible";
+						clearInterval(interval);
+						document.getElementById("resMessage").style.visibility = "visible";
+						document.getElementById("resMessage").innerHTML = "Superman Wins!! Guess who's on the naughty-list.";
+					}
+					
+				}
+			</script>
 	</body>
-	 <script src="finalprojectjavascript.js"></script>
 </html>
